@@ -1,0 +1,33 @@
+.blind{
+    position: absolute;
+    width: 1px;height: 1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    margin: -1px;
+}
+
+.inner{
+    max-width: 1480px;
+    margin: 0 auto;
+}
+
+body{
+
+}
+
+/* 미디어쿼리 */
+
+/* 1025px ~ 1280px */
+@media (max-width:1280px) {
+
+}
+
+/* 768px ~ 1024px */
+@media (max-width:1024px) {
+
+}
+
+/* 320px ~ 767px */
+@media (max-width:767px) {
+
+}

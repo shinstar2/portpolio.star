@@ -1,0 +1,93 @@
+@import './font.css';
+@import './reset.css';
+@import './common.css';
+
+.header{}
+.header .logo{
+   color: #000;
+}
+
+
+
+
+.footer{
+    background-color: #6c4ceb;
+}
+.footer .inner{display: block;}
+.footer .group-info{
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    padding:4vh 10px 4vh;
+}
+.footer .group-info .me{
+    /* border-bottom: 1px solid #000;
+    line-height: 20px;
+    height: 20px; */
+    display: block;
+}
+.footer .group-info .me::after{
+    content: '';
+    height: 1px;
+    background: #fff;
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+}
+.footer .me:hover{
+    color: #200564;
+    transition:0.3s;
+}
+.footer .group-info .me:hover::after{
+    background: #200564;
+    transition:0.3s;
+}
+.footer .sns-area{
+    display: flex;
+    gap: 20px;
+}
+.footer .sns-area span:hover{
+    border-bottom: 1px solid #fff;
+    transition: 0.3s;
+}
+
+.footer .mobile{
+    display: none;
+    justify-content: center;
+   
+}
+.footer .mobile .footer-area{
+    display: flex;
+    gap: 5vw;
+    /* padding: 0 10px; */
+}
+.footer .mobile .contact:hover{
+    border-bottom: 1px solid #fff;
+    transition: 0.3s;
+
+}
+/* 미디어쿼리 */
+
+/* 1025px ~ 1280px */
+@media (max-width:1280px) {
+    .footer .inner{
+    }
+}
+
+/* 768px ~ 1024px */
+@media (max-width:1024px) {
+    .footer .inner{display: block;}
+}
+
+/* 320px ~ 767px */
+@media (max-width:767px) {
+    /* .footer .inner{display: block;} */
+     .footer{padding: 0 10px;}
+     .footer .mobile{
+        display: block;
+        display: flex;
+        justify-content: space-evenly;
+    } 
+    .footer .mobile{}
+    .footer .inner{display: none;}
+}

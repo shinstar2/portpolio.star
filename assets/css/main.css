@@ -1,0 +1,231 @@
+.container{
+    /* background-image: url(../img/bg.jpg) ;
+    background-repeat: no-repeat;
+    background-size:cover; */
+    overflow: hidden;
+    background: #000;
+}
+.container .inner{
+   padding: 0 50px;
+}
+
+.sc-intro{
+    position: relative;
+    height: 100vh;
+  
+
+}
+.sc-intro .text-box{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+.sc-intro span{
+    font-size: 6.6vw;
+}
+.sc-intro span:nth-child(1){}
+.sc-intro span:nth-child(2){}
+.sc-intro span:nth-child(3){}
+.sc-intro span:nth-child(4){}
+.sc-intro .row2{
+    padding-left: 40px;
+}
+.sc-work{
+    /* height: 100vh; */
+    padding: 150px 0;
+}
+.sc-work h2{}
+.sc-work .work-list{
+    padding-top: 50px;
+    position: relative;
+}
+.sc-work .work-list .line{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: #D1D1D1;
+}
+.sc-work .work-item{
+    display: block;
+    padding-bottom: 50px;
+
+}
+.sc-work .work-item .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6vw;
+}
+.sc-work .work-item h3{
+   
+}
+.sc-work .work-item.w1,
+.sc-work .work-item.w3,
+.sc-work .work-item.w6{
+  /* transform: translateX(-100%); */
+}
+
+.sc-work .work-item.w2 .box,
+.sc-work .work-item.w4 .box,
+.sc-work .work-item.w6 .box{
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+/* 애니메이션 */
+
+
+
+/* on 들어갔을 때 */
+
+.sc-work .work-item h3{
+    padding-bottom: 20px;
+    font-size: 5vw;
+}
+.sc-work .work-item p{
+    font-size: 18px;
+    line-height: 28px;
+}
+.sc-work .work-item .desc{
+    font-size: 22px;
+    flex: 1;
+    
+}
+.sc-work .work-item .btn-box{
+    display: flex;
+    gap: 1vw;
+    margin-top: 10px;
+}
+.sc-work .work-item .btn-box a{
+    padding: 1vw;
+    border-radius: 30px;
+    background: rgb(37, 24, 102);
+    font-size: 0.8vw;
+}
+.sc-work .work-item .btn-box a:hover{
+    background: rgb(107, 147, 234);
+    transition: 0.3s;
+}
+.sc-work .work-item .img-box{
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.sc-work .img-box .wrap{
+    position: relative;
+    padding-bottom: 70%;
+}
+.sc-work .img-box img{
+    position: absolute;
+    top: 0;left: 0;
+    height: 100%;width: 100%;
+    object-fit: cover;
+}
+.sc-work .img-box .top{
+    display: flex;
+}
+
+.sc-marquee{
+   
+}
+.sc-marquee .marquee-wrap{}
+.sc-marquee .marquee-list{
+    display: flex;
+}
+.sc-marquee .marquee-item{
+    display: flex;
+    animation: left-marquee 30s linear infinite;
+}
+.sc-marquee .marquee-item span{
+    font-size: 50px;
+}
+.sc-marquee .marquee-item span + span{
+    margin-left: 20px;
+}
+/* 왼쪽 키프레임 */
+@keyframes left-marquee{
+    0%{transform: translateX(0%);}
+   100%{transform: translateX(-100%);}
+
+}
+
+/* 미디어쿼리 */
+
+/* 1025px ~ 1280px */
+@media (max-width:1280px) {
+   
+
+}
+
+/* 768px ~ 1024px */
+@media (max-width:1024px) {
+    /* .sc-intro span{
+        font-size: 10.6vw;
+    } */
+    .sc-intro{
+        height: 80vh;
+    }
+   
+    .sc-work .work-item .btn-box a{
+        font-size: 0.8vw;
+    }
+    .sc-work .work-item p{
+        font-size: 2vw;
+    }
+}
+
+/* 320px ~ 767px */
+@media (max-width:767px) {
+    .container .inner{
+        padding: 0 10px;
+    }
+    .sc-work{
+        padding: 0;
+    }
+    .sc-work .img-box .wrap{
+        height: 45vw;
+        width: 80vw;
+        
+    }
+    .sc-work .work-item h3{
+        font-size: 3vw;
+    }
+    .sc-work .work-item p{
+        font-size: 1.11vw;
+    }
+    .sc-work .work-item .btn-box a{
+        font-size: 0.8vw;
+
+
+    }
+    .sc-work .work-list .line {
+        display: none;
+    }
+    
+    .sc-work .work-item .box{
+        display: grid;
+        justify-content: center;
+        grid-column-gap: 3vw;
+        
+    }
+    .sc-work .work-item p{
+        font-size: 2vw;
+        line-height: 2vh;
+    }
+    
+    .sc-work .work-item.w2 .box, .sc-work .work-item.w4 .box, .sc-work .work-item.w6 .box{
+        display: grid;
+        grid-column-gap: 3vw;
+
+    } 
+
+}
